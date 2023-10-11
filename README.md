@@ -23,6 +23,7 @@ import matplotlib.pyplot as plt
 df=pd.read_csv('SuperStore.csv')
 df.describe()
 df.isnull().sum()
+df.info()
 # FILLING NULL VALUES
 df['Postal Code']=df['Postal Code'].fillna(df['Postal Code'].mode()[0])
 sns.boxplot(df)
@@ -33,7 +34,7 @@ plt.xticks(rotation=90)
 sns.heatmap(df.corr(),annot=True)
 sns.displot(df,x='Region',hue="Category")
 ```
-- Output: (SuperStor.csv)
+- Output: (SuperStorE.csv)
 <img height=20% width=35% src="https://github.com/ROHITJAIND/EX-04-MULTIVARIATE-ANALYSIS/assets/118707073/319a4805-b9d3-4a61-9500-10fa72a9ea55">
 <img height=20% width=25% src="https://github.com/ROHITJAIND/EX-04-MULTIVARIATE-ANALYSIS/assets/118707073/b5522c34-2e4e-4083-8115-1c57861d9971">
 <img height=20% width=35% src="https://github.com/ROHITJAIND/EX-04-MULTIVARIATE-ANALYSIS/assets/118707073/10438e60-a3cc-437a-8aff-26f2820f5b41">
@@ -46,7 +47,18 @@ sns.displot(df,x='Region',hue="Category")
 <img height=25% width=40% src="https://github.com/ROHITJAIND/EX-04-MULTIVARIATE-ANALYSIS/assets/118707073/c7b8247f-c1d5-457c-81d3-57a414d500f2">
 <img height=25% width=50% src="https://github.com/ROHITJAIND/EX-04-MULTIVARIATE-ANALYSIS/assets/118707073/f4beff7c-1e30-436e-9827-d285fef2c576">
 
+- Diabetes.csv
+```Python
+import pandas as pd
+import seaborn as sns
+from scipy import stats
+import matplotlib.pyplot as plt
+df=pd.read_csv('diabetes.csv')
+df.describe()
+df.isnull().sum()
+# REMOVING OUTLIER
 
+```
 
 
 
